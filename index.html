@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Muhammad Imran | Full Stack Web Developer</title>
+  <meta name="description" content="Explore the portfolio of Muhammad Imran, a Full Stack Web Developer from Pakistan, showcasing modern web projects, technical expertise, and development work.">
+  <meta name="author" content="Muhammad Imran">
+  <meta name="theme-color" id="metaTheme" content="#080D19">
+
+  <!-- After deployment, set the social image and canonical URL to absolute
+       URLs on the final public domain. The bundled share image is a 1200x630 PNG.
+  -->
+  <!-- <link rel="canonical" href="https://YOUR-DEPLOYED-DOMAIN/"> -->
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="M. Imran — Full Stack Web Developer">
+  <meta property="og:title" content="Muhammad Imran | Full Stack Web Developer">
+  <meta property="og:description" content="Explore the portfolio of Muhammad Imran, a Full Stack Web Developer from Pakistan, showcasing modern web projects, technical expertise, and development work.">
+  <meta property="og:image" content="assets/images/og-cover.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Muhammad Imran | Full Stack Web Developer">
+  <meta name="twitter:description" content="Portfolio of Muhammad Imran, a Full Stack Web Developer from Pakistan.">
+  <meta name="twitter:image" content="assets/images/og-cover.png">
+
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/images/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Runs before the first paint, so the stored or preferred theme is already on
+       <html> when the stylesheet resolves and the wrong theme never flashes.
+       Without JS this block never runs and the page stays on its dark defaults. -->
+  <script>
+    (function () {
+      var root = document.documentElement;
+      root.className += ' js';
+      var stored = null;
+      try { stored = localStorage.getItem('mi-theme'); } catch (err) { /* private mode */ }
+      var theme = (stored === 'light' || stored === 'dark') ? stored
+        : (window.matchMedia && matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+      root.setAttribute('data-theme', theme);
+      document.getElementById('metaTheme').setAttribute('content', theme === 'light' ? '#EEF2F9' : '#080D19');
+    })();
+  </script>
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <div class="scroll-progress" aria-hidden="true"><span id="scrollBar"></span></div>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a class="brand" href="#home" aria-label="M. Imran — home">
+        <span class="brand__mark" aria-hidden="true">MI</span>
+        <span class="brand__word">M. IMRAN</span>
+      </a>
+
+      <nav class="nav__links" id="navLinks" aria-label="Primary">
+        <a href="#home" class="nav__link is-active">Home</a>
+        <a href="#about" class="nav__link">About</a>
+        <a href="#skills" class="nav__link">Skills</a>
+        <a href="#projects" class="nav__link">Projects</a>
+        <a href="#education" class="nav__link">Education</a>
+        <a href="https://github.com/Imran-developer-12" data-profile-link class="nav__link nav__link--out" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="#contact" class="nav__link">Contact</a>
+      </nav>
+
+      <div class="nav__actions">
+        <!-- aria-pressed is the state, the label names what is being toggled.
+             Only one glyph shows at a time and both are aria-hidden, so the
+             icon never contradicts the accessible name. -->
+        <button class="theme-toggle" id="themeToggle" type="button"
+                aria-pressed="false" aria-label="Light theme" title="Light theme">
+          <svg class="theme-toggle__sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="4.3" fill="currentColor"/>
+            <g stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+              <path d="M12 2.8v2.2M12 19v2.2M2.8 12h2.2M19 12h2.2M5.5 5.5l1.6 1.6M16.9 16.9l1.6 1.6M18.5 5.5l-1.6 1.6M7.1 16.9l-1.6 1.6"/>
+            </g>
+          </svg>
+          <svg class="theme-toggle__moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <mask id="miMoonCut"><rect width="24" height="24" fill="#fff"/><circle cx="17.5" cy="6.5" r="8" fill="#000"/></mask>
+            <circle cx="12" cy="12" r="9" fill="currentColor" mask="url(#miMoonCut)"/>
+          </svg>
+        </button>
+
+        <a href="#contact" class="btn btn--ghost nav__cta">Let's Connect</a>
+      </div>
+
+      <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Open navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home">
+      <div class="hero__grid" aria-hidden="true"></div>
+      <div class="hero__glow hero__glow--a" aria-hidden="true"></div>
+      <div class="hero__glow hero__glow--b" aria-hidden="true"></div>
+
+      <div class="wrap hero__inner">
+        <div class="hero__text">
+          <p class="eyebrow" data-reveal>
+            <span class="eyebrow__line" aria-hidden="true"></span>HELLO, I'M
+          </p>
+
+          <h1 class="hero__name" data-reveal>
+            <span class="mask"><span class="mask__in">Muhammad</span></span>
+            <span class="mask"><span class="mask__in">Imran.</span></span>
+          </h1>
+
+          <p class="hero__role" data-reveal>Full Stack Web Developer</p>
+
+          <p class="hero__desc" data-reveal>
+            I build responsive websites and practical web applications, from polished interfaces
+            to the backend systems that support them.
+          </p>
+
+          <div class="hero__actions" data-reveal>
+            <a href="#projects" class="btn btn--primary">View selected work<span class="btn__arrow" aria-hidden="true">↓</span></a>
+            <a href="#contact" class="btn btn--outline">Contact me</a>
+          </div>
+
+
+        </div>
+
+        <div class="hero__visual">
+          <div class="portrait" data-portrait>
+            <div class="portrait__frame" aria-hidden="true"></div>
+            <div class="portrait__photo">
+              <img id="profileImg" data-asset="profile" src="assets/images/profile-cutout.webp"
+                   alt="Muhammad Imran, Full Stack Web Developer">
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <a class="hero__scrollcue" href="#about" aria-label="Scroll to About">
+        <span class="hero__scrollcue-line" aria-hidden="true"></span>Scroll
+      </a>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section about" id="about">
+      <div class="wrap">
+        <header class="sec-head about__head">
+          <p class="sec-num" aria-hidden="true">01</p>
+          <h2 class="sec-title">A little about me</h2>
+          <p class="sec-sub">A quick introduction to how I build thoughtful web experiences.</p>
+        </header>
+        <div class="about__panel" data-reveal>
+          <div class="about__copy">
+            <p class="about__eyebrow mono">PROFILE <span aria-hidden="true">/</span> FULL-STACK DEVELOPMENT</p>
+            <p class="lead">I’m Muhammad Imran, a full-stack web developer creating clean, responsive websites and practical web applications. I enjoy turning ideas into digital experiences that are clear, useful, and easy to navigate.</p>
+            <p>I work across frontend and backend development using HTML, CSS, JavaScript, Node.js, Express, and MongoDB. From service-based websites to browser applications, I focus on thoughtful details and functionality that serves a real purpose.</p>
+          </div>
+          <ul class="about__facts" aria-label="Professional highlights">
+            <li><span class="about__fact-label mono">What I build</span><strong>Websites &amp; web applications</strong><small>Responsive interfaces, practical features</small></li>
+            <li><span class="about__fact-label mono">My approach</span><strong>Clear, user-focused experiences</strong><small>Thoughtful details and purposeful design</small></li>
+            <li><span class="about__fact-label mono">Core toolkit</span><strong>HTML, CSS &amp; JavaScript</strong><small>Node.js · Express · MongoDB</small></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section skills" id="skills">
+      <div class="wrap">
+        <header class="sec-head">
+          <p class="sec-num" aria-hidden="true">02</p>
+          <h2 class="sec-title">Technologies<br>I Work With</h2>
+          <p class="sec-sub">Grouped by where they sit in a real project — not ranked, not rated.</p>
+        </header>
+
+        <div class="skills__grid">
+          <article class="skgroup skgroup--wide" data-reveal>
+            <header><span class="skgroup__idx mono">A</span><h3 class="skgroup__title">Frontend</h3></header>
+            <ul class="sklist">
+              <li class="sk"><span class="sk__ico" data-ico="html"></span><span class="sk__name">HTML5</span><span class="sk__note">Semantic structure</span></li>
+              <li class="sk"><span class="sk__ico" data-ico="css"></span><span class="sk__name">CSS3</span><span class="sk__note">Layouts &amp; animation</span></li>
+              <li class="sk"><span class="sk__ico" data-ico="js"></span><span class="sk__name">JavaScript</span><span class="sk__note">ES6+, DOM, Web APIs</span></li>
+              <li class="sk"><span class="sk__ico" data-ico="bootstrap"></span><span class="sk__name">Bootstrap 5</span><span class="sk__note">Responsive grids</span></li>
+              <li class="sk"><span class="sk__ico" data-ico="react"></span><span class="sk__name">React</span><span class="sk__note">Basic knowledge</span></li>
+            </ul>
+          </article>
+
+          <article class="skgroup" data-reveal>
+            <header><span class="skgroup__idx mono">B</span><h3 class="skgroup__title">Backend</h3></header>
+            <ul class="sklist">
+              <li class="sk"><span class="sk__ico" data-ico="node"></span><span class="sk__name">Node.js</span><span class="sk__note">Runtime</span></li>
+              <li class="sk"><span class="sk__ico" data-ico="express"></span><span class="sk__name">Express.js</span><span class="sk__note">Routing &amp; middleware</span></li>
+              <li class="sk"><span class="sk__ico" data-ico="rest"></span><span class="sk__name">REST APIs</span><span class="sk__note">JSON endpoints</span></li>
+            </ul>
+          </article>
+
+          <article class="skgroup" data-reveal>
+            <header><span class="skgroup__idx mono">C</span><h3 class="skgroup__title">Database</h3></header>
+            <ul class="sklist">
+              <li class="sk"><span class="sk__ico" data-ico="mongo"></span><span class="sk__name">MongoDB</span><span class="sk__note">Documents &amp; collections</span></li>
+            </ul>
+            <p class="skgroup__foot">Used for database-driven application work.</p>
+          </article>
+
+          <article class="skgroup skgroup--wide" data-reveal>
+            <header><span class="skgroup__idx mono">D</span><h3 class="skgroup__title">Tools &amp; Other</h3></header>
+            <ul class="sklist sklist--row">
+              <li class="sk"><span class="sk__ico" data-ico="git"></span><span class="sk__name">Git</span></li>
+              <li class="sk"><span class="sk__ico" data-ico="github"></span><span class="sk__name">GitHub</span></li>
+              <li class="sk"><span class="sk__ico" data-ico="vscode"></span><span class="sk__name">VS Code</span></li>
+              <li class="sk"><span class="sk__ico" data-ico="cpp"></span><span class="sk__name">C++</span></li>
+              <li class="sk"><span class="sk__ico" data-ico="oop"></span><span class="sk__name">OOP</span></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="section work" id="projects">
+      <div class="wrap">
+        <header class="sec-head">
+          <p class="sec-num" aria-hidden="true">03</p>
+          <h2 class="sec-title">Featured<br>Work</h2>
+          <p class="sec-sub">Four builds that show the range — institutional sites, business sites, browser APIs, and an AI product in progress.</p>
+        </header>
+
+        <article class="proj proj--feature" data-n="01" data-reveal>
+          <div class="proj__media">
+            <figure class="shot">
+              <img data-asset="gct" src="assets/screenshots/gct.webp"
+                   alt="Screenshot of the GCT Bhakkar website" loading="lazy">
+            </figure>
+            <p class="shot__cap mono"><span data-cap>Project preview</span> · gctbhakkar.netlify.app</p>
+          </div>
+          <div class="proj__body">
+            <p class="proj__kicker mono">Project 01 — Institutional web</p>
+            <h3 class="proj__title">GCT College Website</h3>
+            <p class="proj__desc">Contributed to the GCT Bhakkar website by working on its About page and reviewing the visitor experience. The project presents college information, programs, facilities, and campus life.</p>
+            <ul class="tags"><li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>Bootstrap</li></ul>
+            <div class="proj__links">
+              <a class="btn btn--sm btn--primary" href="https://gctbhakkar.netlify.app/" target="_blank" rel="noopener noreferrer">Live website <span aria-hidden="true">↗</span></a>
+              <a class="btn btn--sm btn--outline" href="https://github.com/Imran-developer-12/gct-website" target="_blank" rel="noopener noreferrer">Source on GitHub <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="proj proj--rev" data-n="02" data-reveal>
+          <div class="proj__media">
+            <figure class="shot">
+              <img data-asset="nextgen" src="assets/screenshots/nextgen.webp"
+                   alt="Screenshot of the BlueWave Services website" loading="lazy">
+            </figure>
+            <p class="shot__cap mono"><span data-cap>Project preview</span> · nextgencleaning.netlify.app</p>
+          </div>
+          <div class="proj__body">
+            <p class="proj__kicker mono">Project 02 — Business web presence</p>
+            <h3 class="proj__title">BlueWave Services</h3>
+            <p class="proj__desc">A multi-service home-solutions website that organizes AC installation and repair, home cleaning, and sofa cleaning into a clear service-led experience with prominent enquiry actions.</p>
+            <ul class="tags"><li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>Bootstrap</li></ul>
+            <div class="proj__links">
+              <a class="btn btn--sm btn--primary" href="https://nextgencleaning.netlify.app/" target="_blank" rel="noopener noreferrer">Live website <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="proj proj--wide" data-reveal>
+          <div class="proj__body">
+            <p class="proj__kicker mono">Project 03 — Browser APIs</p>
+            <h3 class="proj__title">AI Voice Assistant</h3>
+            <p class="proj__desc">A browser-based voice assistant that uses speech recognition and speech synthesis to accept spoken input and provide spoken responses.</p>
+            <ul class="tags"><li>JavaScript</li><li>Web APIs</li><li>Speech Recognition</li><li>Speech Synthesis</li></ul>
+            <div class="proj__links">
+              <a class="btn btn--sm btn--primary" href="https://imran-developer-12.github.io/AI-Voice-Assisstant/" target="_blank" rel="noopener noreferrer">Open project <span aria-hidden="true">↗</span></a>
+              <a class="btn btn--sm btn--outline" href="https://github.com/Imran-developer-12/AI-Voice-Assisstant" target="_blank" rel="noopener noreferrer">Source on GitHub <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+          <div class="proj__media">
+            <figure class="shot">
+              <img data-asset="voice" src="assets/screenshots/voice.webp"
+                   alt="Screenshot of the AI Voice Assistant application" loading="lazy">
+            </figure>
+            <p class="shot__cap mono"><span data-cap>Project preview</span> · imran-developer-12.github.io/AI-Voice-Assisstant</p>
+          </div>
+        </article>
+
+        <article class="proj proj--wip" data-reveal>
+          <div class="wip__panel" aria-hidden="true">
+            <div class="wip__chrome"><span></span><span></span><span></span><em>lumora-ai / development</em></div>
+            <pre class="wip__code mono"><code>status:   <span>in development</span>
+stack:    <span>JS · Node · Express · MongoDB</span>
+scope:    <span>content generation + social workflow</span>
+preview:  <span>not published yet</span></code></pre>
+            <div class="wip__beam" ></div>
+          </div>
+          <div class="proj__body">
+            <p class="proj__kicker mono">Project 04 — AI product <span class="badge">In development</span></p>
+            <h3 class="proj__title">Lumora AI</h3>
+            <p class="proj__desc">An AI-powered social media content and growth platform designed to help small businesses create content and manage their social media workflow.</p>
+            <ul class="tags"><li>JavaScript</li><li>Node.js</li><li>Express.js</li><li>MongoDB</li></ul>
+            <p class="proj__note mono">No live URL yet — screenshots added once the product is public.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ EDUCATION ============ -->
+    <section class="section edu" id="education">
+      <div class="wrap edu__grid">
+        <header class="sec-head sec-head--side">
+          <p class="sec-num" aria-hidden="true">04</p>
+          <h2 class="sec-title">Education<br>&amp; Background</h2>
+          <p class="sec-sub">Academic background and qualifications.</p>
+        </header>
+        <div class="edu__cards">
+          <article class="edu__card" data-reveal>
+            <div class="edu__row">
+              <h3>Government College of Technology Bhakkar</h3>
+              <p class="mono edu__period">2024 — 2027</p>
+            </div>
+            <p class="edu__prog">Computer Information Technology (CIT)</p>
+          </article>
+          <article class="edu__card edu__card--matric" data-reveal>
+            <div class="edu__row">
+              <h3>Government High School Behal, Bhakkar</h3>
+              <p class="mono edu__period">2022 — 2024</p>
+            </div>
+            <p class="edu__prog">Matriculation · Science</p>
+            <span class="edu__grade">A+ Grade</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GITHUB ============ -->
+    <section class="section code" id="github">
+      <div class="wrap">
+        <article class="github-card" data-reveal>
+          <div class="github-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" focusable="false"><path fill="currentColor" d="M12 .5C5.65.5.5 5.76.5 12.26c0 5.2 3.29 9.62 7.86 11.18.57.11.78-.25.78-.56v-2.1c-3.2.71-3.87-1.4-3.87-1.4-.52-1.36-1.28-1.72-1.28-1.72-1.05-.74.08-.72.08-.72 1.16.08 1.77 1.22 1.77 1.22 1.03 1.8 2.7 1.28 3.36.98.1-.77.4-1.29.73-1.59-2.55-.3-5.24-1.31-5.24-5.83 0-1.29.45-2.34 1.2-3.16-.12-.3-.52-1.5.11-3.13 0 0 .98-.32 3.2 1.21a10.8 10.8 0 0 1 5.82 0c2.22-1.53 3.19-1.21 3.19-1.21.64 1.63.24 2.83.12 3.13.75.82 1.2 1.87 1.2 3.16 0 4.53-2.7 5.53-5.27 5.82.42.37.78 1.08.78 2.18v3.23c0 .31.2.68.79.56 4.56-1.56 7.85-5.98 7.85-11.18C23.5 5.76 18.35.5 12 .5Z"/></svg>
+          </div>
+          <div class="github-card__copy">
+            <p class="sec-num" aria-hidden="true">05 <span>OPEN SOURCE</span></p>
+            <h2 class="github-card__title">Explore my work on GitHub</h2>
+            <p class="github-card__desc">Browse my public repositories, explore project source code, and see what I’m building next.</p>
+          </div>
+          <a class="btn btn--primary github-card__button" href="https://github.com/Imran-developer-12" data-profile-link target="_blank" rel="noopener noreferrer">Visit my GitHub <span aria-hidden="true">↗</span></a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact" id="contact">
+      <div class="wrap contact__grid">
+        <div class="contact__intro">
+          <p class="sec-num" aria-hidden="true">06</p>
+          <h2 class="sec-title">Have a Project<br>in Mind?</h2>
+          <p class="contact__lead">I'm open to meaningful collaborations, development opportunities, and interesting ideas. Feel free to get in touch.</p>
+
+          <ul class="contact__list">
+            <li>
+              <span class="contact__icon contact__icon--pin" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z"/><circle cx="12" cy="10" r="2.2"/></svg></span>
+              <span class="mono label">Location</span><span class="contact__value">Behal, Bhakkar, Pakistan</span>
+            </li>
+            <li>
+              <span class="contact__icon contact__icon--github" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 .5C5.65.5.5 5.76.5 12.26c0 5.2 3.29 9.62 7.86 11.18.57.11.78-.25.78-.56v-2.1c-3.2.71-3.87-1.4-3.87-1.4-.52-1.36-1.28-1.72-1.28-1.72-1.05-.74.08-.72.08-.72 1.16.08 1.77 1.22 1.77 1.22 1.03 1.8 2.7 1.28 3.36.98.1-.77.4-1.29.73-1.59-2.55-.3-5.24-1.31-5.24-5.83 0-1.29.45-2.34 1.2-3.16-.12-.3-.52-1.5.11-3.13 0 0 .98-.32 3.2 1.21a10.8 10.8 0 0 1 5.82 0c2.22-1.53 3.19-1.21 3.19-1.21.64 1.63.24 2.83.12 3.13.75.82 1.2 1.87 1.2 3.16 0 4.53-2.7 5.53-5.27 5.82.42.37.78 1.08.78 2.18v3.23c0 .31.2.68.79.56 4.56-1.56 7.85-5.98 7.85-11.18C23.5 5.76 18.35.5 12 .5Z"/></svg></span>
+              <span class="mono label">GitHub</span><a href="https://github.com/Imran-developer-12" data-profile-link target="_blank" rel="noopener noreferrer">Imran-developer-12 <span aria-hidden="true">↗</span></a>
+            </li>
+            <li>
+              <span class="contact__icon contact__icon--linkedin" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M5.5 7a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM4 9h3v11H4zM9 9h3v1.5c.6-1 1.8-1.7 3.3-1.7 3.1 0 4.2 2 4.2 5.1V20h-3v-5.4c0-1.6-.3-2.8-2-2.8-1.8 0-2.4 1.2-2.4 2.8V20H9z"/></svg></span>
+              <span class="mono label">LinkedIn</span><a href="#" data-social="linkedin">Add your LinkedIn URL in js/config.js</a>
+            </li>
+            <li>
+              <span class="contact__icon contact__icon--gmail" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="#fff" stroke="#DADCE0" d="M3.5 5.5h17a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-17a1 1 0 0 1-1-1v-12a1 1 0 0 1 1-1Z"/><path fill="none" stroke="#EA4335" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="m3 7 9 6.4L21 7"/><path fill="none" stroke="#4285F4" stroke-width="2" d="M3 8v10"/><path fill="none" stroke="#34A853" stroke-width="2" d="M21 8v10"/><path fill="none" stroke="#FBBC04" stroke-width="2" d="M3 18h3"/></svg></span>
+              <span class="mono label">Gmail</span><a href="#" data-social="email">Add your email in js/config.js</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="contact__panel">
+          <form class="form" id="contactForm" novalidate>
+            <div class="field">
+              <label for="cf-name">Name</label>
+              <input id="cf-name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="cf-email">Email</label>
+              <input id="cf-email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="cf-subject">Subject</label>
+              <input id="cf-subject" name="subject" type="text" required>
+            </div>
+            <div class="field">
+              <label for="cf-message">Message</label>
+              <textarea id="cf-message" name="message" rows="5" required></textarea>
+            </div>
+
+            <button class="btn btn--primary btn--block" type="submit">Send Message <span aria-hidden="true">→</span></button>
+            <p class="form__status" id="formStatus" role="status" aria-live="polite" aria-atomic="true"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="foot">
+    <div class="wrap foot__grid">
+      <div class="foot__brand">
+        <a class="foot__brand-link" href="#home" aria-label="M. Imran — back to top">
+          <span class="brand__mark" aria-hidden="true">MI</span>
+          <span class="foot__logo">M. IMRAN</span>
+        </a>
+        <p class="foot__role">Full Stack Web Developer</p>
+        <p class="foot__loc mono">Behal, Bhakkar, Pakistan</p>
+        <p class="foot__intro">Thoughtful websites, practical applications, and a focus on the details that make them work.</p>
+        <a class="foot__contact-link" href="#contact">Have a project in mind? <span aria-hidden="true">Let’s talk →</span></a>
+      </div>
+      <nav class="foot__nav" aria-label="Footer">
+        <p class="mono label">Explore</p>
+        <a href="#home">Home</a><a href="#about">About me</a><a href="#skills">Skills &amp; tools</a>
+        <a href="#projects">Selected work</a><a href="#education">Education</a><a href="#contact">Contact</a>
+      </nav>
+      <div class="foot__social">
+        <p class="mono label">Find me online</p>
+        <a href="https://github.com/Imran-developer-12" data-profile-link target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+        <a href="#" data-social="linkedin">LinkedIn <span aria-hidden="true">↗</span></a>
+        <a href="#" data-social="email">Email <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+    <div class="wrap foot__bottom">
+      <p class="mono">© <span id="year">2026</span> Muhammad Imran. Crafted with care.</p>
+      <a class="foot__top mono" href="#home">Back to top <span aria-hidden="true">↑</span></a>
+    </div>
+  </footer>
+
+  <button class="totop" id="toTop" aria-label="Back to top" hidden>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 4l7 7-1.4 1.4L13 7.8V20h-2V7.8L6.4 12.4 5 11l7-7Z"/></svg>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script src="js/config.js?v=20261109-1"></script>
+  <script src="js/main.js?v=20261109-1"></script>
+</body>
+</html>

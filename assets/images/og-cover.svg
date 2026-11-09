@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="b" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0D1525"/>
+      <stop offset="1" stop-color="#080D19"/>
+    </linearGradient>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3978FF"/>
+      <stop offset="1" stop-color="#20D5D2"/>
+    </linearGradient>
+    <radialGradient id="glow" cx=".82" cy=".12" r=".7">
+      <stop offset="0" stop-color="#3978FF" stop-opacity=".3"/>
+      <stop offset="1" stop-color="#3978FF" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="gr" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M60 0H0v60" fill="none" stroke="#94AAC9" stroke-opacity=".07"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#b)"/>
+  <rect width="1200" height="630" fill="url(#gr)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+
+  <g font-family="JetBrains Mono, Consolas, monospace">
+    <text x="90" y="176" font-size="20" fill="#20D5D2" letter-spacing="9">HELLO, I'M</text>
+  </g>
+
+  <g font-family="Space Grotesk, Segoe UI, sans-serif" font-weight="700" letter-spacing="-4">
+    <text x="86" y="290" font-size="104" fill="#F4F7FF">Muhammad Imran.</text>
+  </g>
+
+  <text x="90" y="360" font-family="Space Grotesk, Segoe UI, sans-serif" font-size="42" font-weight="500" fill="url(#g)">Full Stack Web Developer</text>
+
+  <g font-family="Inter, Segoe UI, sans-serif" font-size="21" fill="#A5B2C8">
+    <text x="90" y="430">Modern, responsive and user-friendly web experiences —</text>
+    <text x="90" y="462">creative design paired with practical development.</text>
+  </g>
+
+  <g font-family="JetBrains Mono, Consolas, monospace" font-size="16" fill="#71809A" letter-spacing="2">
+    <text x="90" y="540">BEHAL · BHAKKAR · PAKISTAN</text>
+    <text x="470" y="540">HTML · CSS · JS · NODE · EXPRESS · MONGODB</text>
+  </g>
+
+  <rect x="90" y="576" width="1020" height="2" fill="url(#g)" opacity=".5"/>
+  <text x="1110" y="150" text-anchor="end" font-family="Space Grotesk, Segoe UI, sans-serif" font-size="34" font-weight="700" fill="url(#g)" letter-spacing="8">M. IMRAN</text>
+</svg>
